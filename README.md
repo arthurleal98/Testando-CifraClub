@@ -33,6 +33,25 @@ O objetivo deste plano é verificar e validar algumas funcionalidades presentes 
 
 ## Cenários de teste
 
+## Estrutura do projeto
+```bash
+├── features
+│   └── sample.feature
+├── steps
+│   └── sample_steps.py
+├── pages
+│   └── sample_page.py
+├── environment.py
+└── behave.ini
+```
+## Padrão de escrita
+* Os nomes de classes devem seguir a notação CamelCase (MinhaClasse)
+* Os nomes de variáveis devem ser em snake_case e totalmente em minúsculas (primeiro_nome)
+* Os nomes de funções devem ser em snake_case e totalmente em minúsculas (quick_sort())
+* As constantes devem ser em snake_case e totalmente em maiúsculas (PI = 3.14159)
+* Os módulos devem ter nomes curtos, em snake_case e totalmente em minúsculas (numpy)
+* Aspas simples e aspas duplas são tratadas da mesma forma (escolha uma e seja consistente)
+
 
 ## Ambiente de testes
 
