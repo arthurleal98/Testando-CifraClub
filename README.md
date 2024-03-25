@@ -4,24 +4,24 @@
 O objetivo deste plano é verificar e validar algumas funcionalidades presentes no site, testando principalmente se estão funcionais para os usuários.
 
 ## Ferramentas utilizadas
-* Python 3.12
-* Behave
-* Selenium
-* Visual Studio Code
-* Chrome Browser
+* **Python 3.12**
+* **Behave**
+* **Selenium**
+* **Visual Studio Code**
+* **Chrome Browser**
 
 
 ## Funcionalidades a serem testadas
 
-1) Pesquisa de cifra:
+1) **Pesquisa de cifra**:
     * Verificar se a lista de cifras condiz com o pesquisado.
     * Validar as sugestões de pesquisa quando estiver procurando uma cifra.
 
-2) Vizualização da cifra:
+2) **Vizualização da cifra**:
     * Verificar se a cifra corresponde ao que foi pesquisado.
     * Verificar se a cifra é realmente do cantor/banda informado.
 
-3) Ações na cifra:
+3) **Ações na cifra**:
     * Verificar se o botão de "Videoaula" funciona corretamente.
     * Verificar se o botão de "Auto rolagem" funciona corretamente.
     * Verificar se o botão de aumentar e diminuir texto funciona corretamente.
@@ -42,8 +42,8 @@ O objetivo deste plano é verificar e validar algumas funcionalidades presentes 
 
 ## Reponsáveis pelos testes
 
-* Nome: Arthur Leal
-* Email: arthurleal1@hotmail.com
+* **Nome**: Arthur Leal
+* **Email**: arthurleal1@hotmail.com
 
 ## Criterios de Aceitação
 
