@@ -1,20 +1,26 @@
 from behave import given, when, then
+from pages.home_page import HomePage
 
-@given(u'que pesquiso por "Bohemian Rhapsody"')
+@given(u'que eu estou na página inicial')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Given que pesquiso por "Bohemian Rhapsody"')
+    context.driver.get("https://www.cifraclub.com.br/")
+    context.home_page = HomePage(context.driver)
 
 
-@when(u'clico no botão de pesquisa')
+@given(u'pesquiso por "Bohemian Rhapsody"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When clico no botão de pesquisa')
+    context.home_page.pesquisar_cifra("Bohemian Rhapsody")
+
+
+@when(u'clico na primeira opção de sugestao')
+def step_impl(context):
+    context.home_page.clicar_opcao_sugestao()
 
 
 @then(u'vejo a cifra da música "Bohemian Rhapsody"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then vejo a cifra da música "Bohemian Rhapsody"')
+    assert "Bohemian Rhapsody" in context.driver.title
 
-
-@then(u'vejo a cifra da música "Bohemian Rhapsody" do cantor/banda "Queen"')
+@then(u'vejo a cifra da música "Bohemian Rhapsody" da banda "Queen"')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then vejo a cifra da música "Bohemian Rhapsody" do cantor/banda "Queen"')
+    raise NotImplementedError(u'STEP: Then vejo a cifra da música "Bohemian Rhapsody" da banda "Queen"')
