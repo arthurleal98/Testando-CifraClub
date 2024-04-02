@@ -1,6 +1,6 @@
 from behave import given, when, then
 from pages.home_page import HomePage
-
+from pages.resultado_pesquisa_page import ResultadoDePesquisa
 @given(u'que eu estou na página de pesquisa de cifras')
 def step_impl(context):
     context.home_page = HomePage(context.driver)
@@ -18,7 +18,8 @@ def step_impl(context):
 
 @then(u'eu devo ver a cifra de "Noite Feliz"')
 def step_impl(context):
-    assert context.home_page.cifra_existe("Noite Feliz") == True
+    context.resultado_pesquisa_page = ResultadoDePesquisa(context.driver)
+    assert context.resultado_pesquisa_page.verificar_se_a_pesquisa_retornou_resultados("Noite Feliz") == True
 
 @when(u'eu preencher o campo de pesquisa com "Cifra inexistente"')
 def step_impl(context):
@@ -26,7 +27,8 @@ def step_impl(context):
 
 @then(u'eu devo ver a mensagem "Nenhuma cifra encontrada"')
 def step_impl(context):
-    assert context.home_page.cifra_existe("Cifra inexistente") == True
+    context.resultado_pesquisa_page = ResultadoDePesquisa(context.driver)
+    assert context.resultado_pesquisa_page.verificar_se_a_pesquisa_retornou_resultados("Nenhuma cifra encontrada") == True
 
 @when(u'eu preencher o campo de pesquisa com "123#$%456"')
 def step_impl(context):
@@ -34,8 +36,8 @@ def step_impl(context):
 
 @then(u'eu devo ver a mensagem "Termo de pesquisa inválido"')
 def step_impl(context):
-    assert context.home_page.cifra_existe("123#$%456") == False
-
+    context.resultado_pesquisa_page = ResultadoDePesquisa(context.driver)
+    assert context.resultado_pesquisa_page.verificar_se_a_pesquisa_retornou_resultados("Termo de pesquisa inválido") == True
 @when(u'eu preencher o campo de pesquisa com ""')
 def step_impl(context):
     context.home_page.preencher_campo_pesquisa("")
@@ -50,4 +52,5 @@ def step_impl(context):
 
 @then(u'eu devo ver a cifra de "Bohemian Rhapsody"')
 def step_impl(context):
-    assert context.home_page.cifra_existe("Bohemian Rhapsody") == True
+    context.resultado_pesquisa_page = ResultadoDePesquisa(context.driver)
+    assert context.resultado_pesquisa_page.verificar_se_a_pesquisa_retornou_resultados("Bohemian Rhapsody") == True

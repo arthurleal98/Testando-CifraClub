@@ -26,3 +26,6 @@ class HomePage:
 
     def clicar_opcao_sugestao(self):
         self.DRIVER.find_element(*self.ELEMENTO_SUGESTAO).click()
+
+    def clicar_na_primeira_musica(self):
+        self.DRIVER.find_element(By.XPATH, "//span[@class='song-verified--ellipsis top-txt_primary__container']").click()
